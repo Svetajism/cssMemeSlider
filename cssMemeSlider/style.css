@@ -1,0 +1,48 @@
+/* GENERAL STYLES */
+body {
+    background-color: #333333 ;
+}
+
+
+/* FONTS */
+.caption {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SLIDE-CONTAINER */
+.slide_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* IMAGES */
+img {
+    border-radius: 1rem;
+}
+
+/* UNDER IMAGES */
+.elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.controls label {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: gray;
+    cursor: pointer;
+}

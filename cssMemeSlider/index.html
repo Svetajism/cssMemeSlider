@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Meme Slider</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- check the line above -->
+    
 </head>
 <body>
-    
+    <main>
+        <section class="slider">
+
+            <input type="radio" name="slide" id="s1" checked>
+            <input type="radio" name="slide" id="s2">
+            <input type="radio" name="slide" id="s3">
+            <input type="radio" name="slide" id="s4">
+
+            <div class="slide_container">
+                <div class="slide">
+                    <img src="assets/meme1.png" alt="meme1">
+                    <div class="elements">
+                        <p class="caption">Мне к 13:30</p>
+                        <div class="controls">
+                            <label for="s1"></label>
+                            <label for="s2"></label>
+                            <label for="s3"></label>
+                            <label for="s4"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/meme2.png" alt="meme2">
+                    <div class="elements">
+                        <p class="caption">Смотря какой fabric. Смотря сколько details.</p>
+                        <div class="controls">
+                            <label for="s1"></label>
+                            <label for="s2"></label>
+                            <label for="s3"></label>
+                            <label for="s4"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/meme3.png" alt="meme3">
+                    <div class="elements">
+                        <p class="caption">The way you talk</p>
+                        <div class="controls">
+                            <label for="s1"></label>
+                            <label for="s2"></label>
+                            <label for="s3"></label>
+                            <label for="s4"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/meme4.gif" alt="meme4">
+                    <div class="elements">
+                        <p class="caption">Ich will nicht</p>
+                        <div class="controls">
+                            <label for="s1"></label>
+                            <label for="s2"></label>
+                            <label for="s3"></label>
+                            <label for="s4"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
 </body>
 </html>
