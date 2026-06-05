@@ -1,0 +1,160 @@
+/* GENERAL STYLES */
+body {
+    background-color: #333333 ;
+}
+
+/* FONTS */
+.caption {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+
+/* SLIDE-CONTAINER */
+.slide_container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    display: none;
+    width: 70%;
+    overflow: hidden;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* IMAGES */
+img {
+    display: block;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.small_img {
+    object-fit: contain;
+    background-color: #01F301
+}
+
+/* ELEMENTS UNDER IMAGES */
+.elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .elements {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .slide {
+        width: 90%;
+    }
+
+    .slide_container {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    img {
+        height: 50vw; 
+        max-height: 60vh;
+    }
+
+    .small_img {
+        height: 50vw;     
+        max-height: 60vh; 
+    }
+}
+
+.controls {
+    display: flex;
+}
+
+.controls label {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.controls label span {
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: #01c7f3;
+    pointer-events: none;
+}
+
+.controls label:hover span {
+    background: #ffffff;
+}
+
+.controls label:active span {
+    background: #ffffff;
+    transform: scale(0.7);
+}
+
+/* STATE OF THE RADIO BUTTON */
+#s1:checked ~ .slide_container .slide:nth-child(1) .controls label[for="s1"] span,
+#s2:checked ~ .slide_container .slide:nth-child(2) .controls label[for="s2"] span,
+#s3:checked ~ .slide_container .slide:nth-child(3) .controls label[for="s3"] span,
+#s4:checked ~ .slide_container .slide:nth-child(4) .controls label[for="s4"] span {
+    background: transparent;
+    outline: 0.1rem solid #01c7f3;
+}
+
+#s1:checked ~ .slide_container .slide:nth-child(1) .controls label[for="s1"]:hover span,
+#s2:checked ~ .slide_container .slide:nth-child(2) .controls label[for="s2"]:hover span,
+#s3:checked ~ .slide_container .slide:nth-child(3) .controls label[for="s3"]:hover span,
+#s4:checked ~ .slide_container .slide:nth-child(4) .controls label[for="s4"]:hover span {
+    background: transparent;
+    outline: 0.1rem solid #ffffff;
+}
+ 
+/* ANIMATION */
+@keyframes slideInLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0);     opacity: 1; }
+}
+
+/* SHOW THE SLIDE */
+#s1:checked ~ .slide_container .slide:nth-child(1),
+#s2:checked ~ .slide_container .slide:nth-child(2),
+#s3:checked ~ .slide_container .slide:nth-child(3),
+#s4:checked ~ .slide_container .slide:nth-child(4) {
+    display: block;
+}
+
+/* IMG ANIMATION */
+#s1:checked ~ .slide_container .slide:nth-child(1) img,
+#s2:checked ~ .slide_container .slide:nth-child(2) img,
+#s3:checked ~ .slide_container .slide:nth-child(3) img,
+#s4:checked ~ .slide_container .slide:nth-child(4) img {
+    animation: slideInLeft 0.7s ease;
+}
+
+/* TEXT ANIMATION */
+#s1:checked ~ .slide_container .slide:nth-child(1) .caption,
+#s2:checked ~ .slide_container .slide:nth-child(2) .caption,
+#s3:checked ~ .slide_container .slide:nth-child(3) .caption,
+#s4:checked ~ .slide_container .slide:nth-child(4) .caption {
+    animation: slideInLeft 0.7s ease;
+}
