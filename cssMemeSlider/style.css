@@ -3,7 +3,6 @@ body {
     background-color: #333333 ;
 }
 
-
 /* FONTS */
 .caption {
     font-family: Arial, Helvetica, sans-serif;
@@ -37,14 +36,11 @@ img {
     display: block;
     width: 100%;
     height: 60vh;
-    /* aspect-ratio: 2 / 1; */
     object-fit: cover;
     border-radius: 1rem;
-    /* animation: slideInLeft 0.5s ease; */
 }
 
 .small_img {
-    /* aspect-ratio: 2 / 1; */
     object-fit: contain;
     background-color: #01F301
 }
@@ -67,11 +63,11 @@ img {
     }
 
     .slide {
-        width: 90%;        /* шире на мобильном */
+        width: 90%;
     }
 
     .slide_container {
-        height: auto;      /* убираем 100vh — пусть высота определяется контентом */
+        height: auto;
         padding: 2rem 0;
     }
 
@@ -85,7 +81,6 @@ img {
         max-height: 60vh; 
     }
 }
-
 
 .controls {
     display: flex;
@@ -112,6 +107,10 @@ img {
     background: #ffffff;
 }
 
+.controls label:active span {
+    background: #ffffff;
+    transform: scale(0.7);
+}
 
 /* STATE OF THE RADIO BUTTON */
 #s1:checked ~ .slide_container .slide:nth-child(1) .controls label[for="s1"] span,
